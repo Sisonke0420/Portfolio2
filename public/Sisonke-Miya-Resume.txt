@@ -1,0 +1,24 @@
+Sisonke Miya
+
+Frontend Developer • UI Designer • Problem Solver
+
+Profile
+I build modern web experiences with a strong focus on usability, design clarity, and performance.
+
+Skills
+- React
+- JavaScript / TypeScript
+- HTML / CSS
+- UI/UX Design
+- Responsive Design
+- API Integration
+- Git & GitHub
+
+Experience
+- Frontend Developer
+- UI Developer
+- Web Designer
+
+Contact
+Email: sisonke@example.com
+GitHub: https://github.com/Sisonke0420

@@ -1,7 +1,7 @@
 export default function Hero({ name }) {
   return (
     <section className="hero">
-      <div className="hero-copy">
+      <div className="hero-copy reveal-up">
         <p className="eyebrow">Frontend Developer • Designer • Builder</p>
         <h1>
           Hi, I’m <span>{name}</span>
@@ -36,24 +36,27 @@ export default function Hero({ name }) {
         </ul>
       </div>
 
-      <div className="hero-visual">
-        <div className="profile-card">
-          <div className="avatar">S</div>
-          <div className="profile-meta">
-            <span className="tag">Available for work</span>
-            <h3>{name}</h3>
-            <p>Product-focused developer</p>
+      <div className="hero-visual reveal-up" aria-label="Decorative profile illustration">
+        <div className="hero-art">
+          <div className="orb orb-large" />
+          <div className="orb orb-small" />
+          <div className="floating-card card-one">
+            <span>UI Systems</span>
+            <strong>12 Components</strong>
           </div>
-        </div>
+          <div className="floating-card card-two">
+            <span>Performance</span>
+            <strong>95 Lighthouse</strong>
+          </div>
 
-        <div className="mini-panel panel-one">
-          <span>UI Systems</span>
-          <strong>12 Components</strong>
-        </div>
-
-        <div className="mini-panel panel-two">
-          <span>Performance</span>
-          <strong>95 Lighthouse</strong>
+          <div className="profile-card">
+            <div className="avatar">S</div>
+            <div className="profile-meta">
+              <span className="tag">Available for work</span>
+              <h3>{name}</h3>
+              <p>Product-focused developer</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

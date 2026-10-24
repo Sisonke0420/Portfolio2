@@ -21,6 +21,11 @@ export default function Header({ theme, setTheme }) {
         >
           {theme === 'dark' ? '☀️' : '🌙'}
         </button>
+
+        <a href="/Sisonke-Miya-Resume.txt" download className="button small button-download">
+          Resume
+        </a>
+
         <a className="button small" href="#contact">
           Hire Me
         </a>
