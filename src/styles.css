@@ -10,6 +10,7 @@
   --shadow: rgba(0,0,0,0.28);
   --accent: #ff3b7a;
   --accent-2: #2aa9ff;
+  --hover-accent: #ff8bc1;
 }
 
 :root[data-theme='light'] {
@@ -24,6 +25,7 @@
   --shadow: rgba(0,0,0,0.08);
   --accent: #ff3b7a;
   --accent-2: #0a6fd9;
+  --hover-accent: #ff5aa8;
 }
 
 * { box-sizing: border-box; }
@@ -255,12 +257,13 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
   box-shadow: 0 30px 80px var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .portrait-stage:hover {
   transform: translateY(-6px);
   box-shadow: 0 42px 100px rgba(0,0,0,0.26);
+  border-color: rgba(255, 139, 193, 0.6);
 }
 
 .portrait-glow {
@@ -336,13 +339,14 @@ img { max-width: 100%; display: block; }
   background: var(--panel-strong);
   text-align: center;
   font-weight: 600;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
 }
 
 .skill-item:hover {
   transform: translateY(-4px);
-  border-color: rgba(255,255,255,0.22);
+  border-color: rgba(255, 139, 193, 0.8);
   box-shadow: 0 16px 34px rgba(0,0,0,0.14);
+  color: var(--hover-accent);
 }
 
 .projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -355,13 +359,14 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   box-shadow: 0 18px 42px var(--shadow);
   overflow: hidden;
-  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(255, 139, 193, 0.8);
   box-shadow: 0 24px 54px rgba(0,0,0,0.22);
+  background: linear-gradient(180deg, rgba(255, 139, 193, 0.08), rgba(42, 169, 255, 0.05));
 }
 
 .project-card::before {

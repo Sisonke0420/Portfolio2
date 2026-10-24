@@ -40,12 +40,12 @@ export default function Hero({ name }) {
           <div className="portrait-glow portrait-glow-one" />
           <div className="portrait-glow portrait-glow-two" />
           <img
-            src="/SonkeV5.png"
+            src="/SonkeV5.svg"
             alt="Portrait of Sisonke Miya"
             className="portrait-image"
             onError={(event) => {
               event.currentTarget.onerror = null;
-              event.currentTarget.src = '/SonkeV5.svg';
+              event.currentTarget.src = '/sonke-portrait.svg';
             }}
           />
         </div>
