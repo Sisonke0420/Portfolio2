@@ -5,15 +5,15 @@ export default function ProjectsSection({ projects }) {
 
   return (
     <>
-      <section id="projects" className="content-section">
+      <section id="work" className="content-section">
         <div className="section-heading">
-          <p className="eyebrow">Projects</p>
-          <h2>Selected work that balances creativity and function.</h2>
+          <p className="eyebrow">Work</p>
+          <h2>Selected pieces that balance feeling and function.</h2>
         </div>
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <article key={project.title} className="project-card reveal-up">
+            <article key={project.title} className="project-card reveal-up project-art project-art-one">
               <span className="project-category">{project.category}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>

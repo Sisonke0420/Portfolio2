@@ -2,7 +2,7 @@ export default function Footer() {
   const socials = [
     { label: 'GitHub', href: 'https://github.com/Sisonke0420', icon: 'GH' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com', icon: 'in' },
-    { label: 'Email', href: 'mailto:sisonke@example.com', icon: '✉' },
+    { label: 'Email', href: 'mailto:0420nathi@gmail.com', icon: '✉' },
   ];
 
   return (
@@ -17,8 +17,8 @@ export default function Footer() {
           Download Resume
         </a>
 
-        <a className="button secondary" href="mailto:sisonke@example.com">
-          sisonke@example.com
+        <a className="button secondary" href="mailto:0420nathi@gmail.com">
+          0420nathi@gmail.com
         </a>
 
         <div className="socials" aria-label="Social links">

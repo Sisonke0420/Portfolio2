@@ -1,0 +1,51 @@
+<svg width="960" height="960" viewBox="0 0 960 960" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0d15"/>
+      <stop offset="55%" stop-color="#114e8a"/>
+      <stop offset="100%" stop-color="#d9efff"/>
+    </linearGradient>
+    <radialGradient id="faceGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffe0f5"/>
+      <stop offset="18%" stop-color="#ff4d87"/>
+      <stop offset="48%" stop-color="#0a7ee6"/>
+      <stop offset="100%" stop-color="#07192d"/>
+    </radialGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff3b88"/>
+      <stop offset="100%" stop-color="#7d42ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="960" fill="url(#bg)"/>
+
+  <g opacity="0.9">
+    <circle cx="595" cy="250" r="160" fill="url(#faceGlow)" opacity="0.9"/>
+    <circle cx="360" cy="410" r="185" fill="#ff304d" opacity="0.75"/>
+    <circle cx="625" cy="560" r="220" fill="#1b69ff" opacity="0.7"/>
+  </g>
+
+  <path d="M286 710c82-97 188-136 330-120 121 14 210 72 265 175l-22 51c-80-56-162-82-247-84-112-2-222 30-325 87l-1-109Z" fill="url(#shirt)" opacity="0.9"/>
+
+  <g fill="#0f0f1a" opacity="0.94">
+    <path d="M405 375c41-49 104-60 168-38 54 18 91 60 95 120-12 68-74 122-155 126-87 4-156-63-157-143 0-22 12-49 49-65Z"/>
+    <path d="M407 365c63-88 170-126 268-85 36 15 65 35 84 63-58-6-119 11-175 48-17 12-45 30-74 50-35 24-64 48-84 74-18-42-7-91-19-150Z"/>
+  </g>
+
+  <g fill="#dfe9ff" opacity="0.75">
+    <ellipse cx="465" cy="420" rx="43" ry="28"/>
+    <ellipse cx="582" cy="415" rx="41" ry="26"/>
+    <path d="M507 465c27 18 48 18 74 0" stroke="#f4e8ff" stroke-width="7" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <g fill="none" stroke="#1a1a2d" stroke-width="10" stroke-linecap="round">
+    <path d="M462 430c15 10 28 15 43 15 17 0 31-5 46-15"/>
+    <path d="M552 430c15 10 28 15 43 15 17 0 31-5 46-15"/>
+  </g>
+
+  <g fill="#ff4c7e" opacity="0.9">
+    <path d="M531 486c28 18 59 17 82 0-14 30-30 42-47 43-17 1-33-16-35-43Z"/>
+  </g>
+
+  <path d="M567 515c16 16 28 34 40 54 19 28 34 40 64 53-18 32-49 54-87 66-30 9-72 9-112-14-34-19-58-52-61-76 34-25 69-37 100-51 18-10 33-20 56-32Z" fill="#0f172b" opacity="0.86"/>
+</svg>

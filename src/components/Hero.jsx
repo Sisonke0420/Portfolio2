@@ -4,10 +4,10 @@ export default function Hero({ name }) {
       <div className="hero-copy reveal-up">
         <p className="eyebrow">Creative developer / visual thinker / builder</p>
         <h1>
-          I craft <span>quietly bold</span> digital experiences.
+          I build <span>minimal, expressive</span> digital stories.
         </h1>
         <p className="lead">
-          I’m {name}, a developer and designer focused on creating minimal, expressive, and highly usable digital products.
+          I’m {name}, a designer and developer creating tactile, emotionally clear experiences with a strong visual point of view.
         </p>
 
         <div className="cta-row">
@@ -36,8 +36,10 @@ export default function Hero({ name }) {
       </div>
 
       <div className="hero-visual reveal-up" aria-label="Portrait of Sisonke Miya">
-        <div className="portrait-frame">
-          <img src="/SonkeV5.svg" alt="Portrait of Sisonke Miya" className="portrait-image" />
+        <div className="portrait-stage">
+          <div className="portrait-glow portrait-glow-one" />
+          <div className="portrait-glow portrait-glow-two" />
+          <img src="/sonke-portrait.svg" alt="Portrait of Sisonke Miya" className="portrait-image" />
         </div>
       </div>
     </section>
