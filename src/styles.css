@@ -126,6 +126,13 @@ img { max-width: 100%; display: block; }
   background: transparent;
   color: var(--text);
   cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.03);
 }
 
 .button {
@@ -141,14 +148,19 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
-.button:hover { transform: translateY(-1px); }
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
 .button.secondary {
   background: transparent;
   color: var(--text);
 }
+
 .button.small { padding: 0.7rem 1rem; font-size: 0.68rem; }
 
 .hero {
@@ -243,6 +255,12 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
   box-shadow: 0 30px 80px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portrait-stage:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 42px 100px rgba(0,0,0,0.26);
 }
 
 .portrait-glow {
@@ -318,6 +336,13 @@ img { max-width: 100%; display: block; }
   background: var(--panel-strong);
   text-align: center;
   font-weight: 600;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.22);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.14);
 }
 
 .projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -330,6 +355,13 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   box-shadow: 0 18px 42px var(--shadow);
   overflow: hidden;
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: 0 24px 54px rgba(0,0,0,0.22);
 }
 
 .project-card::before {
@@ -466,6 +498,13 @@ img { max-width: 100%; display: block; }
   background: transparent;
   font-size: 0.8rem;
   font-weight: 700;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.03);
 }
 
 .modal-backdrop {
