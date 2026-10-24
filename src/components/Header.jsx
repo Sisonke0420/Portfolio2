@@ -3,12 +3,15 @@ export default function Header({ theme, setTheme }) {
 
   return (
     <header className="topbar">
-      <div className="brand">Sisonke</div>
+      <div className="brand-wrap" aria-label="Sisonke Miya home">
+        <span className="brand-mark">S</span>
+        <span className="brand-name">SONKE</span>
+      </div>
 
       <nav className="nav" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#work">Work</a>
+        <a href="#notes">Notes</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -19,15 +22,11 @@ export default function Header({ theme, setTheme }) {
           onClick={toggleTheme}
           aria-label="Toggle dark and light mode"
         >
-          {theme === 'dark' ? '☀️' : '🌙'}
+          {theme === 'dark' ? '☼' : '☾'}
         </button>
 
-        <a href="/Sisonke-Miya-Resume.txt" download className="button small button-download">
+        <a href="/Sisonke-Miya-Resume.txt" download className="button small">
           Resume
-        </a>
-
-        <a className="button small" href="#contact">
-          Hire Me
         </a>
       </div>
     </header>

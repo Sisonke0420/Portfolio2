@@ -2,61 +2,42 @@ export default function Hero({ name }) {
   return (
     <section className="hero">
       <div className="hero-copy reveal-up">
-        <p className="eyebrow">Frontend Developer • Designer • Builder</p>
+        <p className="eyebrow">Creative developer / visual thinker / builder</p>
         <h1>
-          Hi, I’m <span>{name}</span>
+          I craft <span>quietly bold</span> digital experiences.
         </h1>
         <p className="lead">
-          I design and build modern digital experiences that are visually striking, smooth to use,
-          and made to convert ideas into real products.
+          I’m {name}, a developer and designer focused on creating minimal, expressive, and highly usable digital products.
         </p>
 
         <div className="cta-row">
-          <a className="button" href="#projects">
-            View Projects
+          <a className="button" href="#work">
+            View work
           </a>
           <a className="button secondary" href="#about">
-            About Me
+            About me
           </a>
         </div>
 
         <ul className="stats">
           <li>
             <strong>4+</strong>
-            <span>Years Experience</span>
+            <span>Years</span>
           </li>
           <li>
             <strong>15+</strong>
-            <span>Projects Delivered</span>
+            <span>Projects</span>
           </li>
           <li>
             <strong>100%</strong>
-            <span>Client Focus</span>
+            <span>Intentional</span>
           </li>
         </ul>
       </div>
 
-      <div className="hero-visual reveal-up" aria-label="Decorative profile illustration">
-        <div className="hero-art">
-          <div className="orb orb-large" />
-          <div className="orb orb-small" />
-          <div className="floating-card card-one">
-            <span>UI Systems</span>
-            <strong>12 Components</strong>
-          </div>
-          <div className="floating-card card-two">
-            <span>Performance</span>
-            <strong>95 Lighthouse</strong>
-          </div>
-
-          <div className="profile-card">
-            <div className="avatar">S</div>
-            <div className="profile-meta">
-              <span className="tag">Available for work</span>
-              <h3>{name}</h3>
-              <p>Product-focused developer</p>
-            </div>
-          </div>
+      <div className="hero-visual reveal-up" aria-label="Portrait of Sisonke Miya">
+        <div className="portrait-frame">
+          <img src="/SonkeV5.svg" alt="Portrait of Sisonke Miya" className="portrait-image" />
         </div>
       </div>
     </section>

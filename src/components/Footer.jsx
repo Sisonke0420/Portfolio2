@@ -9,7 +9,7 @@ export default function Footer() {
     <footer id="contact" className="footer">
       <div>
         <p className="eyebrow">Contact</p>
-        <h2>Let’s build something meaningful together.</h2>
+        <h2>Let’s build something thoughtful.</h2>
       </div>
 
       <div className="footer-actions">
@@ -21,7 +21,7 @@ export default function Footer() {
           sisonke@example.com
         </a>
 
-        <div className="socials" aria-label="Social media links">
+        <div className="socials" aria-label="Social links">
           {socials.map((social) => (
             <a
               key={social.label}
