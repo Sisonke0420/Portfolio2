@@ -1,3 +1,13 @@
+import { useEffect, useState } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
+import ExperienceSection from './components/ExperienceSection';
+import Footer from './components/Footer';
+import SplashScreen from './components/SplashScreen';
+
 const skills = [
   'React',
   'JavaScript',
@@ -9,6 +19,8 @@ const skills = [
   'Git & GitHub',
   'Figma',
   'CSS & Tailwind',
+  'REST APIs',
+  'UX Research',
 ];
 
 const projects = [
@@ -57,166 +69,46 @@ const experience = [
 ];
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      return savedTheme;
+    }
+
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  });
+
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSplash(false), 1600);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="app-shell">
-      <header className="topbar">
-        <div className="brand">Sisonke</div>
-        <nav className="nav">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a className="button small" href="#contact">
-          Hire Me
-        </a>
-      </header>
+    <div className={`app-shell theme-${theme}`}>
+      {showSplash ? <SplashScreen name="Sisonke Miya" /> : null}
 
-      <main>
-        <section className="hero">
-          <div className="hero-copy">
-            <p className="eyebrow">Frontend Developer • Designer • Builder</p>
-            <h1>
-              I create digital experiences that feel <span>modern</span>, clear, and memorable.
-            </h1>
-            <p className="lead">
-              I turn ideas into polished web products with thoughtful design, fluid interactions,
-              and clean code.
-            </p>
-            <div className="cta-row">
-              <a className="button" href="#projects">
-                View Projects
-              </a>
-              <a className="button secondary" href="#about">
-                About Me
-              </a>
-            </div>
-            <ul className="stats">
-              <li>
-                <strong>4+</strong>
-                <span>Years Experience</span>
-              </li>
-              <li>
-                <strong>15+</strong>
-                <span>Projects Delivered</span>
-              </li>
-              <li>
-                <strong>100%</strong>
-                <span>Client Focus</span>
-              </li>
-            </ul>
-          </div>
+      {!showSplash ? (
+        <>
+          <Header theme={theme} setTheme={setTheme} />
 
-          <div className="hero-visual">
-            <div className="profile-card">
-              <div className="avatar">S</div>
-              <div className="profile-meta">
-                <span className="tag">Available for work</span>
-                <h3>Sisonke</h3>
-                <p>Product-focused developer</p>
-              </div>
-            </div>
-            <div className="mini-panel panel-one">
-              <span>UI Systems</span>
-              <strong>12 Components</strong>
-            </div>
-            <div className="mini-panel panel-two">
-              <span>Performance</span>
-              <strong>95 Lighthouse</strong>
-            </div>
-          </div>
-        </section>
+          <main>
+            <Hero name="Sisonke Miya" />
+            <AboutSection />
+            <SkillsSection skills={skills} />
+            <ProjectsSection projects={projects} />
+            <ExperienceSection experience={experience} />
+          </main>
 
-        <section id="about" className="content-section">
-          <div className="section-heading">
-            <p className="eyebrow">About</p>
-            <h2>Designing products people genuinely enjoy using.</h2>
-          </div>
-          <div className="about-grid">
-            <p>
-              I’m a developer who enjoys blending visual storytelling with practical engineering.
-              My work focuses on creating interfaces that are not only beautiful but also intuitive,
-              accessible, and easy to use.
-            </p>
-            <p>
-              I love building polished frontend experiences, collaborating on product strategy, and
-              turning complex ideas into simple user journeys that drive real value.
-            </p>
-          </div>
-        </section>
-
-        <section id="skills" className="content-section">
-          <div className="section-heading">
-            <p className="eyebrow">Skills</p>
-            <h2>Tools I use to build and ship meaningful experiences.</h2>
-          </div>
-          <div className="skills-grid">
-            {skills.map((skill) => (
-              <div key={skill} className="skill-item">
-                {skill}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="projects" className="content-section">
-          <div className="section-heading">
-            <p className="eyebrow">Projects</p>
-            <h2>Selected work that balances creativity and function.</h2>
-          </div>
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <article key={project.title} className="project-card">
-                <span className="project-category">{project.category}</span>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="stack-row">
-                  {project.stack.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="content-section">
-          <div className="section-heading">
-            <p className="eyebrow">Experience</p>
-            <h2>My path from creative design to thoughtful engineering.</h2>
-          </div>
-          <div className="timeline">
-            {experience.map((item) => (
-              <div key={`${item.role}-${item.company}`} className="timeline-item">
-                <div className="timeline-dot" />
-                <div className="timeline-content">
-                  <div className="timeline-meta">
-                    <h3>{item.role}</h3>
-                    <span>{item.period}</span>
-                  </div>
-                  <p className="company-name">{item.company}</p>
-                  <p>{item.details}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
-
-      <footer id="contact" className="footer">
-        <div>
-          <p className="eyebrow">Contact</p>
-          <h2>Let’s build something meaningful together.</h2>
-        </div>
-        <div className="footer-actions">
-          <a className="button" href="mailto:sisonke@example.com">
-            sisonke@example.com
-          </a>
-          <a className="button secondary" href="https://github.com/Sisonke0420" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        </div>
-      </footer>
+          <Footer />
+        </>
+      ) : null}
     </div>
   );
 }
